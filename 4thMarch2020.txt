@@ -1,0 +1,2 @@
+SymWallet restart - https://confluence.forge.avaya.com/display/EPTCCC/Mocking+SymWallet+with+SoapUI
+direct ivr number - 7001001
