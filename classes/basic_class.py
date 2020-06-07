@@ -19,3 +19,7 @@ class BasicClass: # Class name should start with uppercase letter
 new_person = BasicClass("Tom", "Cruise")             # Tom and Cruise are 2 arguments we are passing to the constructor
 print(new_person.get_name())
 
+############################################
+# OUTPUT:
+# Tom Cruise
+############################################
