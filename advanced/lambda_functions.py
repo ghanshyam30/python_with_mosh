@@ -1,14 +1,21 @@
 __author__ = "The Bad Coder"
+from functools import reduce
 # print(__author__)
+'''
+Syntax or Idea:
+lambda <parameters separated by comma> : <operation on parameters>,<input sequence>
+And this lambda function we can use with Map,Filter,Reduce for different purposes
+'''
 
 def implement_lambda_function():
     """
-    If we want to deal with some sequence type with some pattern in it it is better to use lambda functions rather than
-    for loop or any kind of loop which is slower and mnon pythonic way to do the coding.
-    Tip : User can not directly use the lambda result first store it in filter or map data structure and then convert it to
+    If we want to deal with some sequence type with some pattern in it, then it is better to use lambda functions rather than
+    for loop or any kind of loop which is slower and non pythonic way to do the coding.
+    Tip : User cannot directly use the lambda result first store it in filter or map data structure and then convert it to
     a list or any sequence basic data type and iterate over it using any loop
     """
     '''
+    Filter: Filter will return only those elements from given sequence who satisfyies criteria
     Problem : Find the items with some price criteria
     '''
     price = 1
@@ -45,6 +52,7 @@ implement_lambda_function()
 #                               MAPS                                        #
 #############################################################################
 '''
+Map performs given operation on the sequence and returns the result sequence
 Problem 2: With the same list we want to deal with only prices
 '''
 price = 1                       # tuple index to operate on for prices
@@ -59,6 +67,19 @@ for price_item in list(prices_data):
     print(price_item)
 
 
+
+##########################################################################
+#                            Reduce                                      #
+##########################################################################
+'''
+Reduce is a special function where it operates on 2 elements, 1st element being result of operation of initial 2 elements in the sequence and 2nd element is thrid item from given sequence.
+Reduce does this till the sequence is fully processed.
+Problem: find the sum of elements in the list
+'''
+some_list = [1,2,3,4,5]
+reduce_result = reduce(lambda x,y:x+y,some_list)
+print("Original List:",some_list)
+print("Reduce sum=",reduce_result)
 
 ##########################################################################
 #                           Output                                       #
